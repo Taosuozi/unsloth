@@ -680,6 +680,7 @@ def patch_trl_rl_trainers():
     import trl.trainer
     all_trainers = dir(trl.trainer)
     all_trainers = [x for x in all_trainers if x.islower() and x.endswith("_trainer")]
+    print("Found trainers:", all_trainers)
     for trainer in all_trainers:
         _patch_trl_rl_trainers(trainer)
     return
