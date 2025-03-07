@@ -174,6 +174,7 @@ def _patch_trl_rl_trainers(trainer_file = "grpo_trainer"):
 
     # Get SFTTrainer, SFTConfig
     RLTrainer_name = name[0]
+    print("Patching", RLTrainer_name)
     RLConfig_name  = config[0]
     try: RLTrainer = eval(f"trl.trainer.{trainer_file}.{RLTrainer_name}")
     except: return
